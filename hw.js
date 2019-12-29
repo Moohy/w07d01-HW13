@@ -9,8 +9,16 @@
 // Hint: look up Array.prototype.map on MDN and see what arguments the .map callback can take.
 // ex: swapCase('hello stranger , what do we have today? ') // => " HELLO stranger , WHAT do WE have TODAY ?"
 var swapCase = function(string) {
-  // Codeeeee
+  string = string.split(' ')
+ str = string.map((s,i) => {
+   if(i%2===0) s=capitalize(s)
+   return s 
+ })
+ console.log(str)
 };
+const capitalize = str => {
+ return str.toUpperCase() 
+}
 ​
 // B) Write a function shiftLetters that takes a string and uses .map to return an encoded string with each letter shifted down the
 // alphabet by one. Hint: Use Look up the JS functions String.fromCharCode() and String.charCodeAt() .
@@ -18,7 +26,11 @@ var swapCase = function(string) {
 // ex. shiftLetters('hello') // => 'ifmmp'
 // ex. (shiftLetters('abcxyz') // => "bcdyz{"
 var shiftLetters = function(string) {
-  // code!
+  string = string.split('')
+  str = string.map(s => {
+    return String.fromCharCode((s.charCodeAt()+1))
+  })
+console.log(str)
 };
 
 
