@@ -58,6 +58,14 @@ console.log(str)
 // - ace of diamonds
 // - 2 of diamonds
 // - 3 of diamonds 
+x = [ 'spades', 'clubs', 'hearts', 'diamonds']
+y = ['ace', 2, 3, 4, 5, 5, 6, 7, 8, 9, 'jack', 'queen', 'king']
+
+y.forEach((y)=>{
+ x.forEach((x) => {
+    console.log(`${y} of ${x}`)
+ }) 
+})
 
 
 // B) Word Play
@@ -66,6 +74,18 @@ console.log(str)
 // Then, loop through this array to build a new array out of every word in the sentence that is 3 or more characters in length.
 // Finally, reverse the order of the new array, join it back together into a string, and display it to the user.
 
+input = window.prompt('Enter sentence')
 
+arr = input.split(' ')
+
+sentence = arr.map((e,i)=>{
+  if(e.length > 2){
+   return e 
+  }
+})
+
+sentence = sentence.reverse().join(' ')
+
+console.log(sentence)
 
 
